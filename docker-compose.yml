@@ -1,0 +1,24 @@
+version: '3'
+
+
+ 
+
+services:
+      
+  postgres:
+    #image: pgvector/pgvector:pg14
+    #image: postgres:13-bullseye
+    build:
+      context: .
+      dockerfile: DOCKERFILE.postgres_w_vector
+    restart: "no"
+    environment:
+      - POSTGRES_USER=llm
+      - POSTGRES_PASSWORD=llm
+      - POSTGRES_DB=llm
+      - PGDATA=/var/lib/pg_data
+    volumes:
+      - ./postgresql/data:/var/lib/pg_data
+    ports:
+      - 5433:5432
+
