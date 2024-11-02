@@ -11,6 +11,25 @@ OPEN AI api key
 
 
 
+Env setup
+---------------------
+
+#### dirs
+```
+mkdir -p postgresql/data
+```
+
+
+#### .env
+```
+cp .env.example .env
+```
+- populate active OPENAI_API_KEY
+
+
+
+
+
 Docker Compose Deployment (db)
 -----------------------------------
 
@@ -85,15 +104,6 @@ pip3.9 install langchain_postgres
 ```
 pip3.9 install numpy && pip3.9 install scipy && pip3.9 install scikit-learn && pip3.9 install pandas && pip3.9 install matplotlib
 ```
-
-
-
-.env setup
----------------------
-```
-cp .env.example .env
-```
-- populate active OPENAI_API_KEY
 
 
 
